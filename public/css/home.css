@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    background-color: #e2e2e2;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 24.18%;
+}
+
+h5{
+    font-size: 18px;
+}
+
+.logo {
+    width: 350px; 
+    height: auto;
+}
+
+
+a{
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 300;
+    color: black;
+    padding-top: 50px; 
+    display: inline-block;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.container{
+    margin: 0 auto;
+    margin-top: 5.5%;
+    background-color: #2957A4;
+    width: 960px;
+    height: 475px;
+}
