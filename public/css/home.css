@@ -1,4 +1,5 @@
-body {
+html, body {
+    height: 140%;
     margin: 0;
     background-color: #e2e2e2;
     font-family: Arial, sans-serif;
@@ -8,11 +9,26 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    padding: 0 24.18%;
+    padding: 0 23.2%;
+    margin-top: -0.6%;
 }
 
 h5{
     font-size: 18px;
+}
+
+h1{
+    color: white;
+    font-size: 26px;
+    margin-top: -50%;
+    margin-left: 69%;
+}
+
+h2{
+    color: white;
+    font-size: 17px;
+    margin-top: 0.5%;
+    margin-left: 70%;
 }
 
 .logo {
@@ -20,6 +36,24 @@ h5{
     height: auto;
 }
 
+.barra{
+    width: 180px; 
+    height: 24px; 
+    background-color: #1E90D8; 
+    border-radius: 1px;
+    margin-top: -3.5%;
+    margin-left: 76%;
+}
+
+.corrida{
+    position: relative;
+    height: 515px;         
+    width: 635px;           
+    flex-shrink: 0;    
+    margin-top: -36px;     
+    left: -20px;   
+    filter: brightness(90%);
+}
 
 a{
     text-decoration: none;
@@ -34,10 +68,41 @@ a:hover{
     text-decoration: underline;
 }
 
-.container{
+.container {
     margin: 0 auto;
     margin-top: 5.5%;
     background-color: #2957A4;
     width: 960px;
     height: 475px;
+    display: flex;
+    flex-direction: column; 
+    gap: 25px;
+    padding: 20px;
 }
+
+.linha {
+    width: 100%; 
+    height: 1px; 
+    background-color: #ffffff8a; 
+    border: none;
+    margin: 20px 0; 
+    margin-top: 15%;
+  }
+  
+.beneficios{
+    margin-top: 7%;
+}
+
+.beneficios h2 {
+    font-size: 46px;
+    color: #000000;
+    margin-left: 35%;
+  }
+
+  .beneficios h3 {
+    font-size: 18px;
+    color: #000000;
+    margin-left: -2%;
+    text-align: center;
+  }
+  

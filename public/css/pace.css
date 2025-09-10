@@ -10,7 +10,8 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    padding: 0 24.18%;
+    padding: 0 23.18%;
+    margin-top: -0.6%;
 }
 
 h5{
@@ -82,7 +83,7 @@ button {
     font-size: 16px;
     cursor: pointer;
     position: relative;
-    top: -445px;
+    top: -455px;
 }
 
 button:hover {
@@ -90,10 +91,12 @@ button:hover {
 }
 
 .resultado {
-    margin-top: -20px;
+    margin-top: -180px;
+    margin-right: -34%;
     font-size: 18px;
     color: white;
     text-align: center; 
+    z-index: 1;
 }
 
 .error {
@@ -110,5 +113,6 @@ button:hover {
     flex-shrink: 0;    
     margin-top: -2.1%;     
     left: -20px;   
+    filter: brightness(92%);
 }
 

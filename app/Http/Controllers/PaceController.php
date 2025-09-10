@@ -23,7 +23,11 @@ class PaceController extends Controller
         $pace = $time / $km;
         $paceFormatado = number_format($pace, 2);
 
-        return view('pace', compact('paceFormatado', 'km', 'time'));
+        return redirect()->route('pace')
+        ->with([
+        'paceFormatado' => $paceFormatado,
+        'km' => $km,
+        'time' => $time
+     ]);
     }
-
 }

@@ -11,8 +11,9 @@ Route::get('/', function () {
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/imc', [ImcController::class, 'index'])->name('imc');
-Route::post('/imc', [ImcController::class, 'calcular']);
+Route::post('/imc', [ImcController::class, 'calcular'])->name('calcular.imc');
 
 Route::get('/pace', [PaceController::class, 'index'])->name('pace');
-Route::post('/pace', [PaceController::class, 'calcular']);
+Route::post('/pace', [PaceController::class, 'calcular'])->name('calcular.pace');
+
 
