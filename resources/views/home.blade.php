@@ -9,7 +9,7 @@
 <body>
     <div class="navbar">
         <img src="{{ asset('img/gov-sead.svg') }}" alt="Sead" class="logo">
-        <a href="{{ route('imc') }}"><h5>Histórico de corrida</h5></a>
+        <a href="{{ route('historico') }}"><h5>Histórico de corrida</h5></a>
         <a href="{{ route('pace') }}"><h5>Cálculo do pace</h5></a>
         <a href="{{ route('imc') }}"><h5>Cálculo do imc</h5></a>
     </div>
