@@ -12,7 +12,12 @@ use App\Http\Controllers\PaceController;
 Route::get('/', function () {
     return view('home');
 });
+
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::get('/historico', [HistoricoController::class, 'index'])
+    ->middleware('auth')
+    ->name('historico');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store'])->name('login.store');
@@ -23,12 +28,8 @@ Route::post('/formulario', [FormularioController::class, 'store'])->name('formul
 Route::get('/corridas/create', [CorridaController::class, 'create'])->name('corridas.create');
 Route::post('/corridas', [CorridaController::class, 'store'])->name('corridas.store');
 
-Route::get('/historico', [HistoricoController::class, 'index'])->name('historico');
-
 Route::get('/imc', [ImcController::class, 'index'])->name('imc');
 Route::post('/imc', [ImcController::class, 'calcular'])->name('calcular.imc');
 
 Route::get('/pace', [PaceController::class, 'index'])->name('pace');
 Route::post('/pace', [PaceController::class, 'calcular'])->name('calcular.pace');
-
-

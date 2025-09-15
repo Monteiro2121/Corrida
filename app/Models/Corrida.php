@@ -9,9 +9,10 @@ class Corrida extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'nome',
-        'data',
-        'pace',
+    protected $fillable = ['nome', 'data', 'pace'];
+
+    protected $casts = [
+        'data' => 'date', 
     ];
+    
 }
