@@ -50,6 +50,13 @@ header > h1 {
     text-shadow: 2px 1px 0px rgb(37, 37, 37);
 }
 
+.voltar {
+    position: absolute;   
+    top: -62px;            
+    left: 518px;           
+    cursor: pointer;    
+}
+
 section {
     max-width: 570px;
     background-color: rgba(0, 0, 0, 0.6);

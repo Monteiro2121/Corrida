@@ -10,41 +10,30 @@
 <body>
 <div class="navbar">
         <img src="{{ asset('img/gov-sead.svg') }}" alt="Sead" class="logo">
-        <a href="{{ route('home') }}"><h5>Voltar para a página inicial</h5></a>
+        <a href="{{ route('home') }}"><h5>Voltar</h5></a>
+        <a href="{{ route('formulario') }}"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="profile" title="Login" viewBox="0 0 16 16">
+  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+    </svg></a>
     </div>
-
     <div class="container">
         <div class="barra"></div>
         @auth
-    <div class="historico-corridas">
-        @if($corridas->count() > 0)
-            <h3>Corridas que você participou:</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nome da Corrida</th>
-                        <th>Pace</th>
-                        <th>Data</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($corridas as $corrida)
-                        <tr>
-                            <td>{{ $corrida->nome }}</td>
-                            <td>{{ $corrida->pace }}</td>
-                            <td>{{ $corrida->data->format('d/m/Y') }}</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
+        <div class="historico-corridas">
+    @if($corridas->count() > 0)
+        <h3>Corridas que você participou: {{ $corridas->count() }}</h3>
+        @foreach($corridas as $corrida)
+            <div class="corrida-item">
+                <p><strong>Nome da Corrida:</strong> {{ $corrida->nome }}</p>
+                <p><strong>Pace:</strong> {{ $corrida->pace }}</p>
+                <p><strong>Data:</strong> {{ \Carbon\Carbon::parse($corrida->data)->format('d/m/Y') }}</p>
+            </div>
+        @endforeach
         @else
-            <p>Você ainda não tem nenhuma corrida registrada.</p>
+            <p>Você ainda não tem nenhuma corrida registrada</p>
         @endif
     </div>
-@endauth
-
+    @endauth
             <button class="btn-adicionar" id="openModal">Adicionar Corrida</button>
-
             <div class="modal" id="corridaModal">
             <div class="modal-content">
                 <button class="close-btn" id="closeModal">&times;</button>

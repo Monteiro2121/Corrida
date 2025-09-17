@@ -22,7 +22,7 @@ Route::get('/historico', [HistoricoController::class, 'index'])
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store'])->name('login.store');
 
-Route::get('/formulario', [FormularioController::class, 'index'])->name('formulario.index');
+Route::get('/formulario', [FormularioController::class, 'index'])->name('formulario');
 Route::post('/formulario', [FormularioController::class, 'store'])->name('formulario.store');
 
 Route::get('/corridas/create', [CorridaController::class, 'create'])->name('corridas.create');
