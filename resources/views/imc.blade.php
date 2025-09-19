@@ -20,9 +20,10 @@
     </div>
 
     <div class="container">
+    <img src="{{ asset('img/imc.webp') }}" alt="Imc" class="imc"/>
+    <div class="barra"></div>
      <form action="{{ route('calcular.imc') }}" method="POST">
             @csrf
-
             <input id="altura" placeholder="Sua altura em metros:" type="text" name="altura" 
             value="{{ old('altura', session('altura')) }}" required />
             @error('altura')
@@ -39,7 +40,7 @@
 
         </form>
 
-        <img src="{{ asset('img/imc.webp') }}" alt="Imc" class="imc" />
+        
     </div>
 
     @if(session('imcFormatado'))

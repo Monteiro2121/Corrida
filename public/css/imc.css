@@ -34,11 +34,21 @@ a:hover {
     text-decoration: underline;
 }
 
+.barra {
+    position: absolute;
+    top: 235px;  
+    right: 492px;  
+    width: 180px;
+    height: 24px;
+    background-color: #FCBA23;
+    border-radius: 2px;
+}
+
 .container {
     margin: 0 auto;
     margin-top: 5.5%;
     background-color: #2957A4;
-    width: 960px;
+    width: 955px;
     height: 475px;
     display: flex;
     flex-direction: column; 
@@ -63,7 +73,7 @@ input {
     line-height: 40px;
     vertical-align: middle;
     position: relative;
-    top: 23px;
+    top: -450px;
 
     text-align: center;     
     line-height: 40px;
@@ -80,7 +90,7 @@ button {
     font-size: 16px;
     cursor: pointer;
     position: relative;
-    top: 62px;
+    top: -400px;
 }
 
 button:hover {
@@ -89,18 +99,17 @@ button:hover {
 
 .error {
     color: red;
-    margin-left: 117px;
+    margin-left: 150px;
     font-size: 14px;
-    margin-top: 5px;
+    margin-top: -50px;
 }
 
 .resultado {
-    margin-top: -180px;
+    margin-top: -145px;
     margin-right: -34%;
     font-size: 18px;
     color: white;
     text-align: center; 
-    z-index: 1;
 }
 
 h1 {
@@ -115,7 +124,8 @@ h1 {
     height: 515px;         
     width: 635px;           
     flex-shrink: 0;    
-    margin-top: -261px;     
+    margin-top: -19.6px;     
     left: -20px;   
     filter: brightness(85%);
+    z-index: 0;
 }

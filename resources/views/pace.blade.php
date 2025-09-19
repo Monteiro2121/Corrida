@@ -20,6 +20,7 @@
 
 <div class="container">
     <img src="{{ asset('img/pace.jpg') }}" alt="Sead" class="pace">
+    <div class="barra"></div>
 
     <form action="{{ route('calcular.pace') }}" method="POST">
         @csrf

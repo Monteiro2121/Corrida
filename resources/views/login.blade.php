@@ -19,11 +19,13 @@
     <div class="table">
     <section>
     <form action="{{ route('login.store') }}" method="POST">
-        <input type="email" placeholder="Email" name="email" required>
-        <input type="password" placeholder="Senha" name="password" required>
-        <input type="submit" value="Entrar">
-        <a href="formulario">Ainda não possuo uma conta</a>
-    </form>
+    @csrf 
+    <input type="email" placeholder="Email" name="email" required>
+    <input type="password" placeholder="Senha" name="password" required>
+    <input type="submit" value="Entrar">
+    <a href="{{ route('formulario') }}">Ainda não possuo uma conta</a>
+</form>
+
 </section>
 </div>
 </div>
